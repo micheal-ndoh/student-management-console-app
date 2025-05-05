@@ -1,0 +1,8 @@
+
+*.class
+
+/bin/
+
+.vscode/
+
+student_report.txt
