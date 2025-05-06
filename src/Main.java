@@ -59,15 +59,14 @@ public class Main {
                     }
                     scanner.nextLine();
 
-                    System.out.print("Enter ID: ");
-                    String id = scanner.nextLine();
+                    String id = Student.generateId();
 
-                    List<Integer> grades = new ArrayList<>();
+                    List<String> grades = new ArrayList<>();
                     System.out.print("Enter number of grades: ");
                     int count = scanner.nextInt();
                     for (int i = 0; i < count; i++) {
                         System.out.print("Grade " + (i + 1) + ": ");
-                        grades.add(scanner.nextInt());
+                        grades.add(scanner.nextLine());
                     }
                     scanner.nextLine();
 
@@ -77,7 +76,7 @@ public class Main {
                     System.out.print("Enter advisor name: ");
                     String advisor = scanner.nextLine();
 
-                    GraduateStudent grad = new GraduateStudent(name, age, id, grades, Project, advisor);
+                    GraduateStudent grad = new GraduateStudent(name, age, grades, Project, advisor);
                     school.addStudent(grad);
                     System.out.println("Graduate student added.");
                 }
