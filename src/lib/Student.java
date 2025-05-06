@@ -2,6 +2,7 @@ package lib;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Student extends Person {
     protected String studentId;
@@ -13,11 +14,15 @@ public class Student extends Person {
         this.grades = new ArrayList<>();
     }
 
-    public Student(String name, int age, String studentId, List<Integer> grades) {
+    public Student(String name, int age,  List<Integer> grades) {
         super(name, age);
-        this.studentId = studentId;
+        this.studentId = generateId();
         this.grades = grades;
     }
+
+    public static String generateId() {
+    return UUID.randomUUID().toString().substring(0, 8);
+}
 
     public String getStudentId() { return studentId; }
 
