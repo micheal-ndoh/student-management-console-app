@@ -9,14 +9,14 @@ public class Main {
         School school = new School();
 
         while (true) {
-            System.out.println("\n===== Student Management Menu =====");
+            System.out.println("\n===== Student Management App =====");
             System.out.println("1. Add Student");
             System.out.println("2. Add Graduate Student");
             System.out.println("3. View All Students");
             System.out.println("4. View All Courses");
             System.out.println("5. Export Student Report");
             System.out.println("0. Exit");
-            System.out.print("Enter option: ");
+            System.out.print("Enter your option: ");
 
             int option = scanner.nextInt();
             scanner.nextLine();
@@ -71,13 +71,13 @@ public class Main {
                     }
                     scanner.nextLine();
 
-                    System.out.print("Enter thesis title: ");
-                    String thesis = scanner.nextLine();
+                    System.out.print("Enter Project title: ");
+                    String Project = scanner.nextLine();
 
                     System.out.print("Enter advisor name: ");
                     String advisor = scanner.nextLine();
 
-                    GraduateStudent grad = new GraduateStudent(name, age, id, grades, thesis, advisor);
+                    GraduateStudent grad = new GraduateStudent(name, age, id, grades, Project, advisor);
                     school.addStudent(grad);
                     System.out.println("Graduate student added.");
                 }
