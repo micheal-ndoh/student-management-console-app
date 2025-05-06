@@ -7,8 +7,7 @@ public class GraduateStudent extends Student {
     private String Project;
     private String advisorName;
 
-    public GraduateStudent(String name, int age, String studentId,
-            List<Integer> grades, String Project, String advisorName) {
+    public GraduateStudent(String name, int age, List<Integer> grades, String Project, String advisorName) {
         super(name, age, grades);
         this.Project = Project;
         this.advisorName = advisorName;
