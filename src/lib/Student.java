@@ -10,7 +10,7 @@ public class Student extends Person {
 
     public Student(String name, int age, String studentId) {
         super(name, age);
-        this.studentId = studentId;
+        this.studentId = generateId();
         this.grades = new ArrayList<>();
     }
 
