@@ -1,7 +1,9 @@
-import lib.*;
+
 import java.util.*;
+import lib.*;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         School school = new School();
@@ -28,13 +30,14 @@ public class Main {
                     while (true) {
                         System.out.print("Enter age: ");
                         age = scanner.nextInt();
-                        if (age > 0) break;
+                        if (age > 0) {
+                            break;
+                        }
                         System.out.println("Age must be positive.");
                     }
                     scanner.nextLine();
 
-                    System.out.print("Enter ID: ");
-                    String id = scanner.nextLine();
+                    String id = Student.generateId();
 
                     Student student = new Student(name, age, id);
                     school.addStudent(student);
@@ -49,7 +52,9 @@ public class Main {
                     while (true) {
                         System.out.print("Enter age: ");
                         age = scanner.nextInt();
-                        if (age > 0) break;
+                        if (age > 0) {
+                            break;
+                        }
                         System.out.println("Age must be positive.");
                     }
                     scanner.nextLine();
@@ -97,7 +102,8 @@ public class Main {
                     return;
                 }
 
-                default -> System.out.println("❌ Invalid choice. Try again.");
+                default ->
+                    System.out.println("Invalid choice. Try again.");
             }
         }
     }
