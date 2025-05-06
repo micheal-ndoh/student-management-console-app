@@ -4,6 +4,7 @@ FROM eclipse-temurin:${JAVA_VERSION}-jdk-alpine as builder
 WORKDIR /app
 
 COPY src/ ./src/
+
 COPY MANIFEST.MF ./MANIFEST.MF
 
 RUN mkdir bin
