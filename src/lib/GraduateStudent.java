@@ -3,23 +3,37 @@ package lib;
 import java.util.List;
 
 public class GraduateStudent extends Student {
-    private String thesisTitle;
+
+    private String Project;
     private String advisorName;
 
     public GraduateStudent(String name, int age, String studentId,
-                           List<Integer> grades, String thesisTitle, String advisorName) {
+            List<Integer> grades, String Project, String advisorName) {
         super(name, age, grades);
-        this.thesisTitle = thesisTitle;
+        this.Project = Project;
         this.advisorName = advisorName;
     }
 
-    public String getThesisTitle() { return thesisTitle; }
-    public String getAdvisorName() { return advisorName; }
+    public String getProject() {
+        return Project;
+    }
+
+    public String getAdvisorName() {
+        return advisorName;
+    }
 
     @Override
     public void displayInfo() {
         System.out.println(super.toString());
-        System.out.println("Thesis: " + thesisTitle);
+        System.out.println("Project: " + Project);
         System.out.println("Advisor: " + advisorName);
+    }
+
+    public void setProject(String Project) {
+        this.Project = Project;
+    }
+
+    public void setAdvisorName(String advisorName) {
+        this.advisorName = advisorName;
     }
 }
