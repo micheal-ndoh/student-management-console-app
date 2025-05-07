@@ -1,38 +1,27 @@
 package lib;
 
-import java.util.List;
-
 public class GraduateStudent extends Student {
-
-    private String Project;
+    private String thesisTitle;
     private String advisorName;
 
-    public GraduateStudent(String name, int age, List<Integer> grades, String Project, String advisorName) {
-        super(name, age, grades);
-        this.Project = Project;
+    public GraduateStudent(String name, int age, String id, String thesisTitle, String advisorName) {
+        super(id, name, age);
+        this.thesisTitle = thesisTitle;
         this.advisorName = advisorName;
     }
 
-    public String getProject() {
-        return Project;
-    }
+    public String getThesisTitle() { return thesisTitle; }
+    public void setThesisTitle(String thesisTitle) { this.thesisTitle = thesisTitle; }
 
-    public String getAdvisorName() {
-        return advisorName;
-    }
+    public String getAdvisorName() { return advisorName; }
+    public void setAdvisorName(String advisorName) { this.advisorName = advisorName; }
 
     @Override
-    public void displayInfo() {
-        System.out.println(super.toString());
-        System.out.println("Project: " + Project);
-        System.out.println("Advisor: " + advisorName);
-    }
-
-    public void setProject(String Project) {
-        this.Project = Project;
-    }
-
-    public void setAdvisorName(String advisorName) {
-        this.advisorName = advisorName;
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.append("Thesis Title: ").append(thesisTitle).append("\n");
+        sb.append("Advisor: ").append(advisorName).append("\n");
+        return sb.toString();
     }
 }
